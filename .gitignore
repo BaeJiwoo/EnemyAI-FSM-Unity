@@ -97,3 +97,11 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# ========== Paid Assets ==========
+Assets/PaidAssets/
+Assets/PaidAssets.meta
+
+# ========== Optional: 개인 리소스 ==========
+Assets/LocalOnly/
+Assets/LocalOnly.meta
