@@ -15,7 +15,7 @@ MonoBehaviour:
   spawnEvents:
   - monsterId: 0
     spawnTime: 1
-    spawnPosition: {x: 7, y: 0, z: 0}
+    spawnPointId: 0
   - monsterId: 0
     spawnTime: 3
-    spawnPosition: {x: -7, y: 0, z: 0}
+    spawnPointId: 1

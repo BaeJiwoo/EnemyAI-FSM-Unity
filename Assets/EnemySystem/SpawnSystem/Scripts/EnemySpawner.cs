@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public EnemyRegistry registry;
+    public EnemyRegistry enemyRegistry;
+    public SpawnPointRegistry spawnPointRegistry;
     public SpawnSchedule schedule;
 
     private float timer = 0f;
@@ -26,9 +27,14 @@ public class EnemySpawner : MonoBehaviour
 
     void Spawn(SpawnEvent data)
     {
-        GameObject prefab = registry.GetEnemy(data.monsterId);
+        GameObject prefab = enemyRegistry.GetEnemy(data.monsterId);
         if (prefab == null) return;
 
-        Instantiate(prefab, data.spawnPosition, Quaternion.identity);
+        Transform spawnPoint =
+            spawnPointRegistry.GetSpawnPoint(data.spawnPointId);
+
+        if (spawnPoint == null) return;
+
+        Instantiate(prefab, spawnPoint.position, spawnPoint.rotation);
     }
 }

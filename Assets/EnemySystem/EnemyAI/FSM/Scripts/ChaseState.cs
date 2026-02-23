@@ -1,4 +1,3 @@
-using Unity.Collections;
 using UnityEngine;
 
 public class ChaseState : IState
@@ -17,13 +16,15 @@ public class ChaseState : IState
         animator.SetBool("IsRunning", true);
     }
 
-    public void Update()    
+    public void Update()
     {
         enemy.MoveToTarget();
 
         if (enemy.IsInAttackRange())
         {
-            enemy.stateMachine.ChangeState(new AttackState(enemy, animator));
+            enemy.stateMachine.ChangeState(
+                new AttackState(enemy, animator)
+            );
         }
     }
 

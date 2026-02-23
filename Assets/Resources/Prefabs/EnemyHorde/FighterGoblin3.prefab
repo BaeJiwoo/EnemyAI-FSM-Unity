@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472519839806351171}
   m_Layer: 0
-  m_Name: Group1
+  m_Name: FighterGoblin3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

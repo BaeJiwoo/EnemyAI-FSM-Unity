@@ -12,5 +12,5 @@ public class SpawnEvent
 {
     public int monsterId;
     public float spawnTime;
-    public Vector3 spawnPosition;
+    public int spawnPointId;
 }

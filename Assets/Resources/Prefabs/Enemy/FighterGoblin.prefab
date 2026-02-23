@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 3864131723078479577}
   - component: {fileID: 3157024177174336509}
   - component: {fileID: 533052408797606276}
-  - component: {fileID: 6553284457204848102}
   - component: {fileID: 2217675611564299893}
-  - component: {fileID: 6627377532631905788}
   - component: {fileID: 9574397945514066}
+  - component: {fileID: 8608903728070825528}
   m_Layer: 6
   m_Name: FighterGoblin
   m_TagString: Untagged
@@ -118,7 +117,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &6553284457204848102
+--- !u!50 &2217675611564299893
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4668716534484126977}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &9574397945514066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4668716534484126977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc2ce4387337874593469b23957f8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  target: {fileID: 0}
+  rb: {fileID: 2217675611564299893}
+  moveSpeed: 3
+  baseAttackRange: 1.2
+  baseDamage: 10
+  baseAttackCooldown: 1
+  obstacleCheckDistance: 2
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!61 &8608903728070825528
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,75 +203,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.01999998, y: 1.68}
+  m_Offset: {x: 0, y: 0.96}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.48648652, y: -0.37499997}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1.48, y: 1.92}
     newSize: {x: 0.37, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.48, y: 1.9199998}
+  m_Size: {x: 1.48, y: 1.92}
   m_EdgeRadius: 0
---- !u!50 &2217675611564299893
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4668716534484126977}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &6627377532631905788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4668716534484126977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a9c55ee7e4f2b45a903006bebc949e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StateMachine
---- !u!114 &9574397945514066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4668716534484126977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc2ce4387337874593469b23957f8ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  target: {fileID: 0}
-  rb: {fileID: 2217675611564299893}
-  moveSpeed: 3
-  attackRange: 4
-  obstacleCheckDistance: 2
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  stateMachine: {fileID: 6627377532631905788}

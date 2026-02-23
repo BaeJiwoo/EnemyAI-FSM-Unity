@@ -1,20 +1,15 @@
-using UnityEngine;
-
-public class StateMachine : MonoBehaviour
+public class StateMachine
 {
     private IState currentState;
 
     public void ChangeState(IState newState)
     {
-        if (currentState != null)
-            currentState.Exit();
-
+        currentState?.Exit();
         currentState = newState;
-
-        currentState.Enter();
+        currentState?.Enter();
     }
 
-    void Update()
+    public void Update()
     {
         currentState?.Update();
     }
